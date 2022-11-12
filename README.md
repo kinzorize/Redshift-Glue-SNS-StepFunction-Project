@@ -1,7 +1,7 @@
 # Redshift-Glue-SNS-StepFunction-Project
 
 Fetch source data from Amazon Redshift Cluster using AWS Glue and Step Functions to gain analytical insights more quickly.
-I read the date from Redshift using Redshift Spectrum and load the data to Redshift and extract the transform data from Redshift and put it into S3.In this project, i put the Redshift in the Private subnet.
+I read the date from Redshift using Redshift Spectrum and load the data to Redshift and extract the transform data from Redshift and put it into S3.In this project, i put the Redshift in the Private subnet to ensure the confidentiality of our data.
 
 # Steps
 
@@ -14,3 +14,7 @@ I read the date from Redshift using Redshift Spectrum and load the data to Redsh
 - Then click on Subnet Association to associate the route table to Public Subnet A.
 - Create Another route table for Public Subnet B and associate it with Public Subnet B using internet Gateway
 - create 2 Route table (my private route A and B) and assocaited it with the created NAT Gateway
+
+* Create Redshift Cluster but before that, click on the left icon and click on configuration and stroll down to the last and click on 'manage Subnet Groups'
+* Then create new Subnet Group under the subnet , add your VPC and add the subnets you created initially.
+* Create IAM role and json policy that will be attached to the Redshift cluster
