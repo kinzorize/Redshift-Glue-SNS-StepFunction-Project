@@ -1,5 +1,6 @@
 # Redshift-Glue-SNS-StepFunction-Project
 
+Orcherate Redshift ETL using Glue and Step Function
 Fetch source data from Amazon Redshift Cluster using AWS Glue and Step Functions to gain analytical insights more quickly.
 I read the date from Redshift using Redshift Spectrum and load the data to Redshift and extract the transform data from Redshift and put it into S3.In this project, i put the Redshift in the Private subnet to ensure the confidentiality of our data.
 
@@ -18,3 +19,5 @@ I read the date from Redshift using Redshift Spectrum and load the data to Redsh
 * Create Redshift Cluster but before that, click on the left icon and click on configuration and stroll down to the last and click on 'manage Subnet Groups'
 * Then create new Subnet Group under the subnet , add your VPC and add the subnets you created initially.
 * Create IAM role and json policy that will be attached to the Redshift cluster
+* Connect the database then create a new connection and ensure using AWS Secret Manager to protect your database
+* use the AWS CLI to create a unique bucket and copy the python files to the S3 bucket.
