@@ -21,3 +21,4 @@ I read the date from Redshift using Redshift Spectrum and load the data to Redsh
 * Create IAM role and json policy that will be attached to the Redshift cluster
 * Connect the database then create a new connection and ensure using AWS Secret Manager to protect your database
 * use the AWS CLI to create a unique bucket and copy the python files to the S3 bucket.
+* Create a connection on AWS Glue using your Redshift cluster information.
