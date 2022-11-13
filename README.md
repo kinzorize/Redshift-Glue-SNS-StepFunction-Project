@@ -1,8 +1,8 @@
 # Redshift-Glue-SNS-StepFunction-Project
 
-Orcherate Redshift ETL using Glue and Step Function
+Orcherate Redshift ETL using Glue and Step-Function.
 Fetch source data from Amazon Redshift Cluster using AWS Glue and Step Functions to gain analytical insights more quickly.
-I read the date from Redshift using Redshift Spectrum and load the data to Redshift and extract the transform data from Redshift and put it into S3.In this project, i put the Redshift in the Private subnet to ensure the confidentiality of our data.
+I read the date from Redshift using Redshift Spectrum and load the data to Redshift and extract the transform data from Redshift and put it into S3.In this project, i also put the Redshift cluster in the Private subnet to ensure the confidentiality of our data.
 
 # Steps
 
@@ -23,3 +23,15 @@ I read the date from Redshift using Redshift Spectrum and load the data to Redsh
 * use the AWS CLI to create a unique bucket and copy the python files to the S3 bucket.
 * Create a connection on AWS Glue using your Redshift cluster information.
 * Create an IAM Glue Role with Policy
+* Create an AWS glue job for the rs_query.py file and include the redshift_module inside the python shell then run it.
+* Create another 3 AWS Glue jobs for reviewschema.sql, etl.sql & topreviews.sql and attach the IAM Glue Role created initially then run accordingly.
+* Verify the external schema using Redshift Spectrum.
+* Create a SNS topic then create a subscription using either email or SMS but SMS Notification cost more.
+* create a Step Function and also create
+* Execute the step function
+* Create QuickSight to visualize the data and do the business analytics.
+
+# Data Source
+
+- Data was source from public amazon S3 public bucket in parquet file format.
+- Link : s3://amazon-reviews-pds/parquet/
