@@ -35,3 +35,16 @@ I read the date from Redshift using Redshift Spectrum and load the data to Redsh
 
 - Data was source from public amazon S3 public bucket in parquet file format.
 - Link : s3://amazon-reviews-pds/parquet/
+
+# AWS Services Used
+
+- VPC
+- AWS Glue
+- S3
+- AWS SNS
+- AWS Step Function
+- AWS QuickSight
+
+* AWS Redshift Cluster
+* AWS Redshift Spectrum
+* IAM Roles and Policies
